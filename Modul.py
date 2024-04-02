@@ -17,8 +17,8 @@ class YourMod(loader.Module):
         self.config = loader.ModuleConfig("CONFIG_STRING", "hello", lambda m: self.strings("cfg_doc", m))
 
     @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
-    async def examplecmd(self, message):
-        """Does something when you type .example (hence, named examplecmd)"""
+    async def amscmd(self, message):
+        """Используй .ams"""
         logger.debug("We logged something!")
         await utils.answer(message, self.config["CONFIG_STRING"])
         await asyncio.sleep(5)  # Never use time.sleep
