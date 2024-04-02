@@ -20,5 +20,6 @@ class YourMod(loader.Module):
     async def amscmd(self, message):
         """Используй .ams"""
         logger.debug("We logged something!")
-        await utils.answer(message, self.config["CONFIG_STRING"])
+        player = requests.get("https://a0938554.xsph.ru/Players.txt").content
+        await utils.answer(message, self.player)
      
