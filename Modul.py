@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class YourMod(loader.Module):
-    """Крутой модуль ещкере"""  # Translateable due to @loader.tds
+    """модули вот"""  # Translateable due to @loader.tds
     strings = {"cfg_doc": "This is what is said, you can edit me with the configurato",
                "name": "Maksimys",
                "after_sleep": "We have finished sleeping!"}
