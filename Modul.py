@@ -22,5 +22,5 @@ class YourMod(loader.Module):
         """Используй .ams"""
         logger.debug("We logged something!")
         player = requests.get("http://a0938554.xsph.ru/Players.txt").content
-        await utils.answer(message, player)
+        await utils.answer(message, player.text)
      
