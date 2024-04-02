@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 class YourMod(loader.Module):
     """Крутой модуль ещкере"""  # Translateable due to @loader.tds
     strings = {"cfg_doc": "This is what is said, you can edit me with the configurato",
-               "name": "amster module",
+               "name": "Maksimys",
                "after_sleep": "We have finished sleeping!"}
 
     def __init__(self):
