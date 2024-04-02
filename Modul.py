@@ -21,7 +21,4 @@ class YourMod(loader.Module):
         """Используй .ams"""
         logger.debug("We logged something!")
         await utils.answer(message, self.config["CONFIG_STRING"])
-        await asyncio.sleep(5)  # Never use time.sleep
-        await utils.answer(message, self.strings("after_sleep", message))
-        await utils.answer(message, "Result")
      
