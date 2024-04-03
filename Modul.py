@@ -23,4 +23,4 @@ class YourMod(loader.Module):
         logger.debug("We logged something!")
         dod = requests.get("http://a0938554.xsph.ru/Players.txt")
         await asyncio.sleep(3)
-        await utils.answer(message, '{dod}')
+        await utils.answer(message, {dod})
