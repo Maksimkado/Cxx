@@ -20,4 +20,4 @@ class YourMod(loader.Module):
     async def rlcmd(self, message):
         """Используй .rl"""
         logger.debug("We logged something!")
-        message = await utils.answer(message.chat_id, "rules")
+        await utils.answer(message.chat_id, "rules")
