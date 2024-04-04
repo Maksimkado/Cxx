@@ -18,7 +18,6 @@ class YourMod(loader.Module):
 
     @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
     async def rlcmd(self, message):
-        """Используй .ams"""
+        """Используй .rl"""
         logger.debug("We logged something!")
-        bob = rot
-        await utils.answer(message, {bob})
+        await utils.answer(message, "rules")
