@@ -20,5 +20,5 @@ class YourMod(loader.Module):
     async def rlcmd(self, message):
         """Используй .ams"""
         logger.debug("We logged something!")
-        bob = "rot"
-        await utils.answer(message, bob.text)
+        bob = rot
+        await utils.answer(message, {bob})
