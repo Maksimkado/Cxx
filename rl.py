@@ -27,7 +27,9 @@ class YourMod(loader.Module):
     """rules"""  # Translateable due to @loader.tds
     strings = {"cfg_doc": "totka",
                "name": "r",
-               "after_sleep": "привет\nпр"}
+               "after_sleep": "привет\nпр"
+               "rules": "Читы, слив промо - бан навсегда\nОскорбление - мут 1 час\nСпам - мут 3 дня\nПорнография - мут 5 дней\nСпам тегом - мут 4 дня\nПробив участника - бан навсегда\nСлив личных данных - бан навсегда+ жалоба\nРеклама-мут два часа\nСкример- мут день""
+              }
 
     def __init__(self):
         self.config = loader.ModuleConfig("CONFIG_STRING", "hello", lambda m: self.strings("cfg_doc", m))
@@ -38,5 +40,5 @@ class YourMod(loader.Module):
         logger.debug("We logged something!")
         await utils.answer(message, self.config["CONFIG_STRING"])
         await asyncio.sleep(5)  # Never use time.sleep
-        await utils.answer(message, self.strings("after_sleep", message))
+        await utils.answer(message, self.strings("rules", message))
       
