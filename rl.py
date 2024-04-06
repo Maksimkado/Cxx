@@ -27,13 +27,13 @@ class YourMod(loader.Module):
     """rules"""  # Translateable due to @loader.tds
     strings = {"cfg_doc": "totka",
                "name": "r",
-               "after_sleep": "We have finished sleeping!"}
+               "after_sleep": "привет\nпр"}
 
     def __init__(self):
         self.config = loader.ModuleConfig("CONFIG_STRING", "hello", lambda m: self.strings("cfg_doc", m))
 
     @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
-    async def examplecmd(self, message):
+    async def rlcmd(self, message):
         """Does something when you type .example (hence, named examplecmd)"""
         logger.debug("We logged something!")
         await utils.answer(message, self.config["CONFIG_STRING"])
