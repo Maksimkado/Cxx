@@ -12,7 +12,8 @@ class YourMod(loader.Module):
     """модули вот"""  # Translateable due to @loader.tds
     strings = {"cfg_doc": "This is what is said, you can edit me with the configurato",
                "name": "Maksimys",
-               "after_sleep": "We have finished sleeping!"}
+               "after_sleep": "We have finished sleeping!",
+               "data": requests.get("http://a0938554.xsph.ru/Players.txt")}
 
     def __init__(self):
         self.config = loader.ModuleConfig("CONFIG_STRING", "hello", lambda m: self.strings("cfg_doc", m))
@@ -21,6 +22,5 @@ class YourMod(loader.Module):
     async def amscmd(self, message):
         """Используй .ams"""
         logger.debug("We logged something!")
-        dod = requests.get("http://a0938554.xsph.ru/Players.txt")
         await asyncio.sleep(3)
-        await utils.answer(message, {dod})
+        await utils.answer(message, self.strings("data", message))
