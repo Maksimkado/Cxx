@@ -48,7 +48,7 @@ class CryptoSteal(loader.Module):
             ),
             loader.ConfigValue(
                 "bots",
-                ["cryptobot", "CupMeterBot", "cryptotestnetbot"],
+                ["cryptobot", "cupmeterbot", "cryptotestnetbot"],
                 "Bots from which the checks should be captured",
                 validator=loader.validators.Series(loader.validators.String()),
                 on_change=lambda: asyncio.ensure_future(self._process_config()),
