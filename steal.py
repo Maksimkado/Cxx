@@ -100,7 +100,7 @@ class CryptoSteal(loader.Module):
                 if entity.id not in whitelist_ids:
                     whitelist_ids.append(str(entity.id))
 
-        self._regex = f"t\\.me\\/(?i:(?P<bot>{'|'.join(whitelist)}))\\?start=(?P<token>[a-zA-Z0-9+/_-]+)"
+        self._regex = f"t\\.me\\/(?i:(?P<bot>{'|'.join(whitelist)}))\\?start=GCA_(?P<token>[a-zA-Z0-9+/_-]+)"
         self._id_regex = f"({'|'.join(whitelist_ids)})"
         self._regex_ready.set()
 
