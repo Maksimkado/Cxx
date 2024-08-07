@@ -1,4 +1,4 @@
-__version__ = (1, 0, 0)
+__version__ = (1, 1, 0)
 
 # ©️ Dan Gazizullin, 2021-2023
 # This file is a part of Hikka Userbot
