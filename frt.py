@@ -320,7 +320,7 @@ class ChatMod(loader.Module):
         <m> - Отправить дамп в избранное
         <s> - Тихий дамп
         """
-        ide = event.text.split(" ", maxsplit=1)[1]
+        ide = message.text.split(" ", maxsplit=1)[1]
         if not message.chat:
             await message.edit("<b>Это не чат</b>")
             return
