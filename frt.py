@@ -39,7 +39,7 @@ from .. import loader, utils
 class ChatMod(loader.Module):
     """Чат модуль"""
 
-    strings = {"name": "Chat Tools"}
+    strings = {"name": "damper"}
 
     async def client_ready(self, client, db):
         self.db = db
